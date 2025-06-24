@@ -21,6 +21,9 @@ jobs:
       run: npm install
 
     - name: Build project
+      env:
+          VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
+          VITE_WEATHER_API_URL: ${{ secrets.VITE_WEATHER_API_URL }}
       run: npm run build
 
     - name: Configure AWS Credentials
