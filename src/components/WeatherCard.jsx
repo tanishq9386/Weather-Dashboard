@@ -1,4 +1,4 @@
-import { formatDate, getWeatherIcon, windSpeedToKmh, visibilityToKm, capitalizeWords } from '../utils/helpers';
+import { formatDate, getWeatherIcon, windSpeedToKmh, visibilityToKm, capitalizeWords } from 'utils/helpers';
 
 const WeatherCard = ({ weatherData }) => {
   if (!weatherData) return null;

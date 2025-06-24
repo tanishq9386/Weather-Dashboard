@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import SearchBar from './SearchBar';
-import WeatherCard from './WeatherCard';
-import { weatherService, sampleWeatherData } from '../services/weatherApi';
-import { getDayName, getWeatherIcon, capitalizeWords } from '../utils/helpers';
+import SearchBar from 'components/SearchBar';
+import WeatherCard from 'components/WeatherCard';
+import { weatherService, sampleWeatherData } from 'services/weatherApi';
+import { getDayName, getWeatherIcon, capitalizeWords } from 'utils/helpers';
 
 const Dashboard = () => {
   const [weatherData, setWeatherData] = useState(null);
