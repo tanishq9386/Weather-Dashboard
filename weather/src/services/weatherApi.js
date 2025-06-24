@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-const BASE_URL = 'https://api.openweathermap.org/data/2.5';
+const BASE_URL = import.meta.env.VITE_WEATHER_API_URL; 
 
-// Create axios instance
 const weatherAPI = axios.create({
   baseURL: BASE_URL,
   params: {
@@ -13,7 +12,6 @@ const weatherAPI = axios.create({
 });
 
 export const weatherService = {
-  // Get current weather by city name
   getCurrentWeather: async (cityName) => {
     try {
       const response = await weatherAPI.get('/weather', {
@@ -24,8 +22,6 @@ export const weatherService = {
       throw new Error(error.response?.data?.message || 'Failed to fetch weather data');
     }
   },
-
-  // Get 5-day forecast
   getForecast: async (cityName) => {
     try {
       const response = await weatherAPI.get('/forecast', {
@@ -36,8 +32,6 @@ export const weatherService = {
       throw new Error(error.response?.data?.message || 'Failed to fetch forecast data');
     }
   },
-
-  // Get weather by coordinates
   getWeatherByCoords: async (lat, lon) => {
     try {
       const response = await weatherAPI.get('/weather', {
