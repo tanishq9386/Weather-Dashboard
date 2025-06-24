@@ -149,3 +149,26 @@ input:focus, .btn:focus, .btn:active, button:focus, button:active {
   padding: 1rem;
   margin-top: 1rem;
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #ffffff 25%,
+    #adadad 50%,
+    #ffffff 75%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 7s ease-in-out infinite;
+  animation-delay: 2s;
+}

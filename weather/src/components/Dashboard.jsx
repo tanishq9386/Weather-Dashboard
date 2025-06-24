@@ -116,7 +116,7 @@ const Dashboard = () => {
       <div className="row mb-4">
         <div className="col-12">
           <div className="text-center text-white">
-            <h1 className="display-4 fw-bold mb-2">
+            <h1 className="display-4 fw-bold mb-2 shimmer-text">
               <i className="fas fa-cloud-sun me-3"></i>Weather Dashboard
             </h1>
             <p className="lead">Get real-time weather information for any city worldwide</p>
